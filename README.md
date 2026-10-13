@@ -164,3 +164,9 @@ listed for an analyst to execute, never executed automatically.
 
 [MIT](LICENSE). The sample alerts are derived from the CICIDS2017 dataset (University of New
 Brunswick) through FlowGuard's replay.
+
+<!-- portfolio-footer -->
+
+---
+
+<sub>Part of a cybersecurity & AI engineering portfolio: [FlowGuard](https://github.com/hugo-kte/flowguard-nids) (network IDS) · [Detection-as-code](https://github.com/hugo-kte/detection-as-code) (Sigma rules) · [Insider-threat UEBA](https://github.com/hugo-kte/insider-threat-ueba) · **AlertLens (SOC triage)** · [PromptWall](https://github.com/hugo-kte/promptwall) (LLM firewall) · [MLSeal](https://github.com/hugo-kte/secure-mlops-pipeline) (secure MLOps) · [Gleaner](https://github.com/hugo-kte/cti-to-stix) (CTI to STIX).</sub>
