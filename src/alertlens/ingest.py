@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import gzip
 import json
-from collections.abc import Iterator
 from datetime import datetime
 from pathlib import Path
 from typing import Any
@@ -78,11 +77,3 @@ def read_alerts(path: str | Path) -> list[Alert]:
     with opener(path, "rt", encoding="utf-8") as fh:
         alerts = [a for a in (parse(json.loads(line)) for line in fh if line.strip()) if a]
     return sorted(alerts, key=lambda a: a.ts)
-
-
-def iter_raw(path: str | Path) -> Iterator[dict[str, Any]]:
-    opener = gzip.open if str(path).endswith(".gz") else open
-    with opener(path, "rt", encoding="utf-8") as fh:
-        for line in fh:
-            if line.strip():
-                yield json.loads(line)
