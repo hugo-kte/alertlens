@@ -44,9 +44,10 @@ laptop CPU:
    techniques (scanning, discovery) that nothing in the incident supported. Restricted to
    explaining a verdict it did not make, it produced **zero** unsupported claims.
 3. **Grounding by construction works.** The model picks playbook steps *by ID* and a validator
-   drops any ID outside the retrieved playbook. No invented step reached a ticket. In 4 incidents
-   it wrote "`SCN-T1: Determine whether...`" instead of the bare ID: the parser now accepts that
-   form.
+   drops any ID outside the retrieved playbook. No invented step reached a ticket. The 32
+   "hallucinated step IDs" the report counts for the hybrid run all come from 4 incidents where
+   the model copied playbook lines with their text ("`SCN-T1: Determine whether...`") instead of
+   the bare ID: the parser now accepts that form.
 
 The resulting design: **deterministic rules (or a calibrated model) own the verdict; the LLM
 writes the ticket and plans the response from a playbook it cannot leave.**
