@@ -1,0 +1,255 @@
+{
+  "generated_at": "2026-10-12T18:24:35+00:00",
+  "model": "llama3.2:3b",
+  "alerts": 6985,
+  "incidents": 240,
+  "compression": 29.104166666666668,
+  "rules_all_incidents": {
+    "incidents": 240,
+    "attack_incidents": 20,
+    "benign_incidents": 220,
+    "escalation_recall": 1.0,
+    "missed_attacks": 0,
+    "fp_closure_rate": 0.8318181818181818,
+    "escalated_benign": 37,
+    "verdicts": {
+      "true_positive": 19,
+      "false_positive": 183,
+      "needs_investigation": 38
+    }
+  },
+  "sample": {
+    "incidents": 60,
+    "seed": 0,
+    "n_benign": 40
+  },
+  "configs": {
+    "rules": {
+      "incidents": 60,
+      "attack_incidents": 20,
+      "benign_incidents": 40,
+      "escalation_recall": 1.0,
+      "missed_attacks": 0,
+      "fp_closure_rate": 0.8,
+      "escalated_benign": 8,
+      "verdicts": {
+        "true_positive": 11,
+        "false_positive": 32,
+        "needs_investigation": 17
+      },
+      "quality": {
+        "invalid_or_fallback": 0,
+        "retries": 0,
+        "hallucinated_step_ids": 0,
+        "hallucinated_technique_ids": 0,
+        "summaries_with_unsupported_claims": 0,
+        "unsupported_claims_examples": [],
+        "steps_cited_per_escalation": 3.0,
+        "latency_s": {
+          "mean": 0.0005684314989290821,
+          "p95": 0.0005221917919698166
+        }
+      },
+      "per_family": {
+        "Anomaly": {
+          "incidents": 34,
+          "attacks": 1,
+          "escalated": 2
+        },
+        "DoS": {
+          "incidents": 3,
+          "attacks": 1,
+          "escalated": 3
+        },
+        "BruteForce": {
+          "incidents": 2,
+          "attacks": 2,
+          "escalated": 2
+        },
+        "PortScan": {
+          "incidents": 11,
+          "attacks": 7,
+          "escalated": 11
+        },
+        "Heartbleed": {
+          "incidents": 1,
+          "attacks": 1,
+          "escalated": 1
+        },
+        "WebAttack": {
+          "incidents": 1,
+          "attacks": 1,
+          "escalated": 1
+        },
+        "Botnet": {
+          "incidents": 6,
+          "attacks": 6,
+          "escalated": 6
+        },
+        "Infiltration": {
+          "incidents": 1,
+          "attacks": 0,
+          "escalated": 1
+        },
+        "DDoS": {
+          "incidents": 1,
+          "attacks": 1,
+          "escalated": 1
+        }
+      }
+    },
+    "llm": {
+      "incidents": 60,
+      "attack_incidents": 20,
+      "benign_incidents": 40,
+      "escalation_recall": 1.0,
+      "missed_attacks": 0,
+      "fp_closure_rate": 0.15,
+      "escalated_benign": 34,
+      "verdicts": {
+        "true_positive": 45,
+        "false_positive": 6,
+        "needs_investigation": 9
+      },
+      "quality": {
+        "invalid_or_fallback": 12,
+        "retries": 23,
+        "hallucinated_step_ids": 0,
+        "hallucinated_technique_ids": 0,
+        "summaries_with_unsupported_claims": 10,
+        "unsupported_claims_examples": [
+          "technique:T1046",
+          "technique:T1595",
+          "technique_name:Active Scanning",
+          "technique_name:Network Service Discovery"
+        ],
+        "steps_cited_per_escalation": 5.611111111111111,
+        "latency_s": {
+          "mean": 37.27020513336756,
+          "p95": 61.70496129688834
+        }
+      },
+      "per_family": {
+        "Anomaly": {
+          "incidents": 34,
+          "attacks": 1,
+          "escalated": 28
+        },
+        "DoS": {
+          "incidents": 3,
+          "attacks": 1,
+          "escalated": 3
+        },
+        "BruteForce": {
+          "incidents": 2,
+          "attacks": 2,
+          "escalated": 2
+        },
+        "PortScan": {
+          "incidents": 11,
+          "attacks": 7,
+          "escalated": 11
+        },
+        "Heartbleed": {
+          "incidents": 1,
+          "attacks": 1,
+          "escalated": 1
+        },
+        "WebAttack": {
+          "incidents": 1,
+          "attacks": 1,
+          "escalated": 1
+        },
+        "Botnet": {
+          "incidents": 6,
+          "attacks": 6,
+          "escalated": 6
+        },
+        "Infiltration": {
+          "incidents": 1,
+          "attacks": 0,
+          "escalated": 1
+        },
+        "DDoS": {
+          "incidents": 1,
+          "attacks": 1,
+          "escalated": 1
+        }
+      }
+    },
+    "hybrid": {
+      "incidents": 60,
+      "attack_incidents": 20,
+      "benign_incidents": 40,
+      "escalation_recall": 1.0,
+      "missed_attacks": 0,
+      "fp_closure_rate": 0.8,
+      "escalated_benign": 8,
+      "verdicts": {
+        "true_positive": 11,
+        "false_positive": 32,
+        "needs_investigation": 17
+      },
+      "quality": {
+        "invalid_or_fallback": 0,
+        "retries": 0,
+        "hallucinated_step_ids": 32,
+        "hallucinated_technique_ids": 0,
+        "summaries_with_unsupported_claims": 0,
+        "unsupported_claims_examples": [],
+        "steps_cited_per_escalation": 6.607142857142857,
+        "latency_s": {
+          "mean": 18.817915222966985,
+          "p95": 28.14801608963025
+        }
+      },
+      "per_family": {
+        "Anomaly": {
+          "incidents": 34,
+          "attacks": 1,
+          "escalated": 2
+        },
+        "DoS": {
+          "incidents": 3,
+          "attacks": 1,
+          "escalated": 3
+        },
+        "BruteForce": {
+          "incidents": 2,
+          "attacks": 2,
+          "escalated": 2
+        },
+        "PortScan": {
+          "incidents": 11,
+          "attacks": 7,
+          "escalated": 11
+        },
+        "Heartbleed": {
+          "incidents": 1,
+          "attacks": 1,
+          "escalated": 1
+        },
+        "WebAttack": {
+          "incidents": 1,
+          "attacks": 1,
+          "escalated": 1
+        },
+        "Botnet": {
+          "incidents": 6,
+          "attacks": 6,
+          "escalated": 6
+        },
+        "Infiltration": {
+          "incidents": 1,
+          "attacks": 0,
+          "escalated": 1
+        },
+        "DDoS": {
+          "incidents": 1,
+          "attacks": 1,
+          "escalated": 1
+        }
+      }
+    }
+  }
+}

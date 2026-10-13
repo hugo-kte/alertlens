@@ -1,0 +1,21 @@
+# Asset inventory of the monitored network (here: the CICIDS2017 lab, from its public
+# documentation). Only defender-side knowledge: no attacker addresses are listed.
+internal_networks:
+  - 192.168.10.0/24   # corporate LAN
+  - 172.16.0.0/16     # firewall internal interface (NAT for inbound internet traffic)
+
+assets:
+  - {ip: 192.168.10.50, name: web-01, role: "Public web server (Ubuntu 16, Apache)", criticality: high, internet_facing: true}
+  - {ip: 192.168.10.51, name: srv-02, role: "Server (Ubuntu 12): SSH, FTP", criticality: high, internet_facing: true}
+  - {ip: 192.168.10.3, name: dc-01, role: "Domain controller and DNS (Windows Server 2016)", criticality: critical}
+  - {ip: 172.16.0.1, name: fw-01, role: "Edge firewall, internal side: inbound internet traffic is NATed to this address", criticality: high}
+  - {ip: 192.168.10.5, name: ws-05, role: "Workstation (Windows 10)", criticality: medium}
+  - {ip: 192.168.10.8, name: ws-08, role: "Workstation (Windows Vista)", criticality: medium}
+  - {ip: 192.168.10.9, name: ws-09, role: "Workstation (Windows 7)", criticality: medium}
+  - {ip: 192.168.10.12, name: ws-12, role: "Workstation (Ubuntu 16)", criticality: medium}
+  - {ip: 192.168.10.14, name: ws-14, role: "Workstation (Windows 10)", criticality: medium}
+  - {ip: 192.168.10.15, name: ws-15, role: "Workstation (Windows 10)", criticality: medium}
+  - {ip: 192.168.10.16, name: ws-16, role: "Workstation (Ubuntu 16)", criticality: medium}
+  - {ip: 192.168.10.17, name: ws-17, role: "Workstation (Ubuntu 16)", criticality: medium}
+  - {ip: 192.168.10.19, name: ws-19, role: "Workstation (Ubuntu 14)", criticality: medium}
+  - {ip: 192.168.10.25, name: ws-25, role: "Workstation (macOS)", criticality: medium}
